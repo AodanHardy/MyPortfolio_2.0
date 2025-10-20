@@ -1,0 +1,403 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.main-container{
+    min-height: 1200px
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Profile */
+.cv-profile-img {
+    border-radius: 50%;
+    border: 5px solid #e0e0e0;
+}
+
+.cv-name {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cv-title {
+    font-weight: 500;
+    color: #1e90ff;
+}
+
+.cv-location {
+    font-size: 0.9em;
+}
+
+/* Section titles */
+.cv-section-title {
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* About Me */
+.cv-about {
+    font-size: 1em;
+}
+
+/* Experience and Education */
+.cv-experience, .cv-education {
+    margin-bottom: 20px;
+}
+
+.cv-job-title, .cv-degree {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.cv-company, .cv-school {
+    font-size: 1.2em;
+    color: #b0b0b0;
+}
+
+.cv-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-list li {
+    margin-bottom: 10px;
+}
+
+.cv-list li::before {
+    content: "\2022";
+    color: #1e90ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.cv-subsection-title {
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.cv-qualifications {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-qualifications li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+/* Skills */
+.cv-skill {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 15px;
+    color: #e0e0e0;
+}
+
+.cv-skill-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cv-skill-description {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-skill {
+        padding: 10px;
+    }
+    .main-container{
+        min-height: 550px;
+    }
+
+}
+
+
+
+/* Blog */
+.blog-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    background-color: #2b2b2b;
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post .card-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.blog-post .card-subtitle {
+    font-size: 1rem;
+    color: #b8b8b8;
+    margin-bottom: 20px;
+}
+
+.blog-post .card-text {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+/* Blog Specific Spacing */
+.blog-container .mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.blog-container .mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+/* Dark Mode Overrides for Blog */
+body.blog-page {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.blog-container .card-body {
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+
+/* Projects */
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background-color: #2b2b2b;
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-title {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+/* Experience Page Styling */
+.experience-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.experience-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #4a4a4a;
+}
+
+.placement-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.placement-subtitle {
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    margin-bottom: 15px;
+}
+
+.placement-content {
+    font-size: 1rem;
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+.placement-paragraph {
+    margin-bottom: 20px;
+}
+
+.placement-subheading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Contact Page Styling */
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+.contact-email {
+    margin-bottom: 20px;
+}
+
+.contact-email a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-email a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.social-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-link i {
+    margin-right: 10px;
+}
+
+.social-link:hover {
+    color: #1e90ff;
+}
+
+
+/* About Me */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+}
+
+.about-content {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    line-height: 1.8;
+}
+
+.about-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e90ff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-paragraph {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
