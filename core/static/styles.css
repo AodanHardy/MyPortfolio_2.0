@@ -1,11 +1,12 @@
+
 body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-}
 
+}
 .main-container{
-    min-height: 1200px
+    min-height: 550px;
 }
 
 .cv-container {
@@ -120,78 +121,8 @@ body {
     .cv-skill {
         padding: 10px;
     }
-    .main-container{
-        min-height: 550px;
-    }
-
-}
 
 
-
-/* Blog */
-.blog-container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.blog-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    border-bottom: 3px solid #4a4a4a;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.blog-post {
-    background-color: #2b2b2b;
-    border: 1px solid #4a4a4a;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.blog-post:hover {
-    transform: translateY(-5px);
-}
-
-.blog-post .card-title {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.blog-post .card-subtitle {
-    font-size: 1rem;
-    color: #b8b8b8;
-    margin-bottom: 20px;
-}
-
-.blog-post .card-text {
-    font-size: 1.2rem;
-    color: #dcdcdc;
-    line-height: 1.6;
-}
-
-/* Blog Specific Spacing */
-.blog-container .mb-4 {
-    margin-bottom: 1.5rem !important;
-}
-
-.blog-container .mb-5 {
-    margin-bottom: 3rem !important;
-}
-
-/* Dark Mode Overrides for Blog */
-body.blog-page {
-    background-color: #1c1c1c;
-    color: #ffffff;
-}
-
-.blog-container .card-body {
-    background-color: #2b2b2b;
-    padding: 30px;
-    border-radius: 8px;
 }
 
 
