@@ -2,113 +2,71 @@
 
 {% block body %}
 <div class="container mt-5">
-    <h2 class="experience-title mb-4">Professional Experience</h2>
+  <h2 class="experience-title mb-4">Professional Experience</h2>
 
-    <div class="experience-item mb-5">
+  <section class="exp-timeline" aria-label="Work history">
+    <!-- Full Fat Things -->
+    <article class="experience-item" itemscope itemtype="https://schema.org/JobPosting">
+      <header>
+        <h3 class="placement-heading" itemprop="title">Software Engineer</h3>
+        <h4 class="placement-subtitle">
+          <span itemprop="hiringOrganization">Full Fat Things</span> · Remote ·
+          <time itemprop="datePosted" datetime="2025-05">May 2025</time> – <span>Present</span>
+        </h4>
+      </header>
+      <div class="placement-content">
+        <ul class="placement-bullets">
+          <li>Contribute to client web apps across Drupal/Wagtail/React; collaborate with seniors on delivery & quality.</li>
+          <li>Own tickets end-to-end: scope, implement, review, test; ship iterative improvements with clear comms.</li>
+          <li>Use GitHub Actions, Docker; assist with perf/observability fixes when needed.</li>
+        </ul>
+        <ul class="tag-list" aria-label="Tools used">
+          <li class="tag">Drupal</li><li class="tag">Wagtail</li><li class="tag">React</li>
+          <li class="tag">Docker</li><li class="tag">Postgres</li><li class="tag">Linux</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Magnite -->
+    <article class="experience-item">
+      <header>
         <h3 class="placement-heading">Intern Software Engineer</h3>
-        <h4 class="placement-subtitle">Magnite | Belfast | 2023 - 2024</h4>
-        <div class="placement-content">
-            <p class="placement-paragraph">
-                My placement is at a company called Magnite, based at their Belfast office. My placement
-                opportunity began on the 4th of July 2023 and is anticipated to end at the end of June 2024.
-                During my time as an Intern in Magnite, I worked in the Reporting Team, to help build a new
-                Reporting system to replace the Legacy system.
-            </p>
-            <h5 class="placement-subheading">Adapting</h5>
-            <p class="placement-paragraph">
-                When I joined the SpringServe Reporting Team as an intern, I faced a significant learning curve.
-                Initially, I lacked the depth of knowledge required for the role. I found it surprising that despite
-                my experience in Python and C#, the team primarily used Java. However, I had some prior exposure to
-                Java and found it interesting, so I embraced the opportunity to expand my skills in that area. Beyond
-                programming languages, the role demanded various other competencies. Collaborative software development
-                was new to me, having previously worked independently in my last placement. Additionally, understanding
-                the intricate project structure of insight was challenging due to its complexity. Despite these hurdles,
-                I was eager to immerse myself in the learning process and contribute to the team's success.
-            </p>
+        <h4 class="placement-subtitle">Magnite · Belfast · Jul 2023 – Jul 2024</h4>
+      </header>
+      <div class="placement-content">
+        <p class="placement-paragraph">
+          Joined the SSR/Insight team to help build the next-gen reporting system and migrate from legacy.
+        </p>
+        <h5 class="placement-subheading">Impact</h5>
+        <ul class="placement-bullets">
+          <li>Built CSV comparison test harness; improved pass rate from ~10% → 90%+ after refactor.</li>
+          <li>Lifted automated coverage with targeted JUnit suites on high-risk paths.</li>
+          <li>Created focused Grafana dashboard (throughput, system split, timings, failures, harness results).</li>
+        </ul>
+        <ul class="tag-list">
+          <li class="tag">Java</li><li class="tag">Vert.x</li><li class="tag">JUnit</li>
+          <li class="tag">Grafana</li><li class="tag">Postgres</li>
+        </ul>
+      </div>
+    </article>
 
-
-            <h5 class="placement-subheading">My Contribution</h5>
-            <p class="placement-paragraph">
-                <ul>
-                    <li>Test Harness</li>
-                    <li>Grafana Dashboard</li>
-                    <li>Testing</li>
-                </ul>
-
-                <p>
-                    The aim of the test harness is to get the reports done by v1 reporting, and request insight for them,
-                    then once insight has done it, get both CSV files and compare them. Once compared, put the results into
-                    a Postgres table. My first attempt at this took far too long to do. I kept getting stuck on issues and
-                    in the end, it was only able to successfully compare about 10% of the reports. But after a few months of
-                    working on different issues I felt much more confident that I was able to make it work a great deal better.
-                    I also felt somewhat embarrassed over the quality and structure of the code, since when I was doing it in
-                    the first place, I didn’t have a great understanding of Insight and the reporting system, and I wanted to
-                    correct this. And in the space of a couple of weeks I had the Test Harness working much better and in a much
-                    more structured way and the success rate of 10% increased to over 90%, with the rest of the failures being
-                    unavoidable. I was able to do this because of the amount of learning I had done in the months between.
-                    This will be vital when comparing the new Reporting system Insight and the old system. The reports generated
-                    by insight need to be identical to the old system, and the test harness will tell them how it is progressing in that.
-                </p>
-                <p>
-                    Over my placement I have written many Junit tests. When I started there were only a few JUnit tests written,
-                    but by using the site, I was able to see where was covered and where wasn’t, and by writing tests where needed
-                    I was able to get the coverage from below 10% to over 65%.
-                </p>
-
-                <P>Before I built the Grafana Dashboard, the SpringServe Reporting Team used mostly DataDog to monitor how insight was performing,
-                    but most of the data there relates more to CPU and memory usage rather than more relevant data for the team.
-                    So, the Grafana dashboard was custom built specially with the relevant data that the team actually want to see,
-                    such as the rate of reports, which reporting system is using them, report types, processing times of both systems,
-                    fail rates, and the results of the test harness. Everything relating to how Insight is done on one page. After my placement
-                    I believe this will still be used daily by the other team members as the primary monitoring tool.</P>
-            </p>
-
-
-
-
-            <h5 class="placement-subheading">Going Forward</h5>
-            <p class="placement-paragraph">
-                My year placement at Magnite has had a massive impact on my professional development and my employability.
-                At the start of this placement, I wasn’t sure what area of software development I wanted to go into. I felt
-                the most confident in Python and maybe web development. When I was put into the SpringServe Reporting Team,
-                which really only used Java to develop their software, I was surprised since I had very little experience with
-                Java. This decision was probably based on my experience on my last placement where I built an attendance system
-                in C#. But over the year, my skills and confidence in Java has improved substantially to the point where it is by
-                far my favourite language.</p>
-            <p>
-                It has also improved my professional development in other ways outside of programming. I now have experience in how
-                software engineering teams work at an industrial level and how these projects are planned and implemented. The experience
-                working in a team will be invaluable when looking for graduate roles.
-            </p>
-        </div>
-    </div>
-
-    <div class="experience-item mb-5">
-        <h3 class="placement-heading">Foundation Degree Placement</h3>
-        <h4 class="placement-subtitle">Rasharkin Women’s Group | Rasharkin | 2022</h4>
-        <div class="placement-content">
-            <p class="placement-paragraph">
-                For my placement in second year, I found a local charity in Rasharkin called Rasharkin Womans Group. They
-                provide various services to the community, the largest of which is their after school club which is an after school childcare facility.
-                My role was to modernise the information system they use.
-            </p>
-            <h5 class="placement-subheading">Key Contributions</h5>
-            <p class="placement-paragraph">
-                I set up a shared cloud file between all the computers in the office and each board members home computers,
-                where any letters, bank statements and other documents could be saved to.
-            </p>
-
-            <p>
-                I created an attendance system using C# that is used by their childcare facility. Each day the attendance is logged
-                into the system which is saved to an SQL database. The program allows a range of reports to be created from this data
-                which are Tailor-made for their needs (invoices, reports sent to governing bodies, etc.).
-            </p>
-
-            <p>
-                My other roles included setting up their new computers and printers, creating tutorials on the new systems and security
-                concerns, and helping board members with their own computer issues.
-            </p>
-        </div>
-    </div>
+    <!-- Rasharkin -->
+    <article class="experience-item">
+      <header>
+        <h3 class="placement-heading">Placement IT / Software Engineer</h3>
+        <h4 class="placement-subtitle">Rasharkin Women’s Group · Jan 2022 – Jun 2022</h4>
+      </header>
+      <div class="placement-content">
+        <ul class="placement-bullets">
+          <li>Built a C# attendance system (MySQL) with tailored reporting (invoices, returns, oversight).</li>
+          <li>Migrated filing to shared cloud; onboarded staff with docs & security guidance.</li>
+          <li>Modernised desktop setup and provided light user support.</li>
+        </ul>
+        <ul class="tag-list">
+          <li class="tag">C#</li><li class="tag">MySQL</li><li class="tag">Windows</li><li class="tag">Docs</li>
+        </ul>
+      </div>
+    </article>
+  </section>
 </div>
 {% endblock %}
