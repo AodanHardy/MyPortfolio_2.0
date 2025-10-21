@@ -1,0 +1,100 @@
+ @use 'variables' as *;
+
+/* ==========================================
+   BASE / GLOBAL (no page-specific styles here)
+   ========================================== */
+
+/* Reset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body.site {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-family-base;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: $color-heading;
+  font-weight: $font-weight-bold;
+  line-height: 1.25;
+  margin-bottom: $spacing-sm;
+}
+
+a { color: $color-accent; text-decoration: none; transition: color $transition-medium; }
+a:hover, a:focus { color: $color-heading; }
+
+/* Generic container helper (let Bootstrap manage widths) */
+.site-main { min-height: 60vh; }
+
+/* ==========================================
+   NAVBAR (Bootstrap overrides, minimal & scoped)
+   ========================================== */
+.site-nav {
+  --bs-navbar-padding-y: .8rem;
+  background: rgba(18,18,18,.85);
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid $color-border;
+
+  .navbar-brand {
+    color: $color-heading;
+    font-weight: $font-weight-bold;
+    letter-spacing: .2px;
+  }
+
+  .navbar-toggler { border-color: $color-border; }
+
+  .nav-link {
+    color: $color-text !important;
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding-inline: .75rem;
+
+    &.active {
+      color: $color-heading !important;
+      position: relative;
+    }
+    &.active::after {
+      content: "";
+      position: absolute; left: .75rem; right: .75rem; bottom: .2rem;
+      height: 2px; background: $color-accent; border-radius: 2px;
+    }
+
+    &:hover { color: $color-heading !important; }
+  }
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.site-footer {
+  background: #0f0f0f;
+  color: $color-text;
+  border-top: 1px solid $color-border;
+  padding: 1.25rem 0;
+  margin-top: auto;
+
+  .footer-link {
+    color: $color-text;
+    transition: color $transition-medium, text-shadow $transition-medium;
+
+    &:hover {
+      color: $color-accent;
+      text-shadow: 0 0 6px rgba(79,140,255,.5);
+    }
+  }
+}
+
+/* Utilities */
+.text-muted { color: $color-text-muted !important; }
+.main-container { min-height: 550px; } /* legacy helper if used in templates */
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
