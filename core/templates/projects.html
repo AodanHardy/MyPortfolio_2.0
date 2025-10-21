@@ -1,23 +1,141 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="main-container mt-5">
-    <h2 class="projects-title mb-4">Projects</h2>
-    <div class="row">
-        {% for project in projects %}
-            <div class="col-md-12 mb-12" style="padding-bottom: 30px">
-                <div class="project-card d-flex">
+<section class="apx-projects" aria-labelledby="apx-projects-title">
+  <div class="apx-container">
+    <!-- Hero / Intro -->
+    <header class="apx-hero">
+      <p class="apx-eyebrow">Selected Work</p>
+      <h1 id="apx-projects-title" class="apx-title">
+        Building thoughtful, fast, and maintainable web experiences.
+      </h1>
+      <p class="apx-intro">
+        A mix of personal and experimental projects — from full builds to smaller ideas I’ve enjoyed developing.
+      </p>
+    </header>
 
-                    <div class="project-details ml-4">
-                        <h3 class="project-title">{{ project.title }}</h3>
-                        {% if project.github_link %}
-                            <a href="{{ project.github_link }}" class="btn btn-primary" target="_blank">View on GitHub</a>
-                        {% endif %}
-                        <p class="project-description">{{ project.description }}</p>
-                    </div>
-                </div>
+    <!-- FLAGSHIP PROJECTS -->
+    <section class="apx-section apx-flagship" aria-labelledby="apx-flagship-heading">
+      <div class="apx-section-head">
+        <h2 id="apx-flagship-heading" class="apx-section-title">Flagship Projects</h2>
+        <p class="apx-section-subtitle">A few I’m most proud of — larger builds and long-term work.</p>
+      </div>
+
+      <div class="apx-grid apx-flagship-grid">
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=12" alt="Preview of the product finder interface">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Product Finder</a></h3>
+            <ul class="apx-badges">
+              <li>Drupal</li><li>JS</li><li>UX</li>
+            </ul>
+            <p class="apx-card-text">
+              Filterable grid system with dynamic pagination and Muuri.js layout — built for speed and clarity.
+            </p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">View case study</a>
             </div>
-        {% endfor %}
-    </div>
-</div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=13" alt="Editorial interface for History site">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Editorial CMS</a></h3>
+            <ul class="apx-badges">
+              <li>Drupal</li><li>Views</li><li>Workflow</li>
+            </ul>
+            <p class="apx-card-text">
+              Streamlined editorial flow and improved search across thousands of historical archives.
+            </p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">View case study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=14" alt="Locator map interface">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Location & Migration Tools</a></h3>
+            <ul class="apx-badges">
+              <li>Drupal</li><li>API</li><li>Maps</li>
+            </ul>
+            <p class="apx-card-text">
+              Integrated mapping and search features with scalable data migrations.
+            </p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">View case study</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MORE BUILDS -->
+    <section class="apx-section apx-more" aria-labelledby="apx-more-heading">
+      <div class="apx-section-head">
+        <h2 id="apx-more-heading" class="apx-section-title">More Builds</h2>
+        <p class="apx-section-subtitle">Smaller projects, side experiments, and learning exercises.</p>
+      </div>
+
+      <div class="apx-grid apx-grid--side apx-more-grid">
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/900/675?random=21" alt="Rust CLI terminal preview">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Rust CLI Playground</a></h3>
+            <ul class="apx-badges">
+              <li>Rust</li><li>CLI</li>
+            </ul>
+            <p class="apx-card-text">Experimenting with fast, memory-safe tools and algorithmic benchmarks.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/900/675?random=22" alt="Restaurant template preview">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Restaurant Builder</a></h3>
+            <ul class="apx-badges">
+              <li>Django</li><li>React</li><li>Postgres</li>
+            </ul>
+            <p class="apx-card-text">Multi-tenant website templates for restaurants with simple admin.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Voting System Revamp</a></h3>
+            <ul class="apx-badges">
+              <li>Django</li><li>GraphQL</li><li>Rust</li>
+            </ul>
+            <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</section>
 {% endblock %}
