@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# watch-sass – run Sass in watch mode for this project
+
+# exit immediately on error
+set -e
+
+# Move to project root (directory containing this script)
+cd "$(dirname "$0")/.."
+
+# Run Sass watch
+echo "Starting Sass watcher..."
+sass --watch core/static/scss/main.scss:core/static/css/main.css
