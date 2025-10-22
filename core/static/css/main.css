@@ -482,4 +482,264 @@ a:hover, a:focus {
   }
 }
 
+/* ===========================
+   PROJECTS PAGE (scoped)
+   Namespace: .apx-projects
+   =========================== */
+.apx-projects {
+  /* Theme tokens (local to projects page) */
+  --apx-bg: #0f1115;
+  --apx-surface: #151821;
+  --apx-text: #e8eaf1;
+  --apx-muted: #a8b0c3;
+  --apx-accent: #4f8cff;
+  --apx-line: rgba(255,255,255,0.08);
+  background: var(--apx-bg);
+  color: var(--apx-text);
+  padding-block: clamp(2.5rem, 4vw, 4rem);
+  /* Container */
+}
+.apx-projects .apx-container {
+  max-width: 1100px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+.apx-projects {
+  /* Hero */
+}
+.apx-projects .apx-hero {
+  margin-bottom: clamp(1.8rem, 3vw, 2.4rem);
+  border-bottom: 1px solid var(--apx-line);
+  padding-bottom: 1.5rem;
+}
+.apx-projects .apx-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--apx-muted);
+  margin: 0 0 0.25rem 0;
+}
+.apx-projects .apx-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  line-height: 1.2;
+  margin: 0.2rem 0 0.6rem 0;
+}
+.apx-projects .apx-intro {
+  max-width: 65ch;
+  color: var(--apx-muted);
+  margin: 0.25rem 0 1rem 0;
+}
+.apx-projects {
+  /* Section Headings */
+}
+.apx-projects .apx-section {
+  margin-top: clamp(1.8rem, 3vw, 2.4rem);
+}
+.apx-projects .apx-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+.apx-projects .apx-section-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  margin: 0;
+}
+.apx-projects .apx-section-subtitle {
+  margin: 0;
+  color: var(--apx-muted);
+  font-size: 0.95rem;
+}
+.apx-projects {
+  /* Base grid (fallback) */
+}
+.apx-projects .apx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.2rem);
+}
+.apx-projects {
+  /* Side grid (for more builds) */
+}
+.apx-projects .apx-grid--side {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.apx-projects {
+  /* Card */
+}
+.apx-projects .apx-card {
+  background: var(--apx-surface);
+  border: 1px solid var(--apx-line);
+  border-radius: 16px;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.apx-projects .apx-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25), 0 26px 60px -32px rgba(0, 0, 0, 0.75);
+}
+.apx-projects {
+  /* Media */
+}
+.apx-projects .apx-card-media {
+  display: block;
+  position: relative;
+  aspect-ratio: 16/10;
+  background: #0b0d13;
+  overflow: hidden;
+}
+.apx-projects .apx-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 250ms ease;
+}
+.apx-projects .apx-card:hover .apx-card-media img {
+  transform: scale(1.06);
+}
+.apx-projects {
+  /* Body */
+}
+.apx-projects .apx-card-body {
+  padding: 0.9rem 1rem 1.05rem;
+  display: grid;
+  gap: 0.55rem;
+}
+.apx-projects .apx-card-title {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.25;
+}
+.apx-projects .apx-card-title a {
+  color: var(--apx-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.apx-projects .apx-card-title a:hover {
+  color: var(--apx-accent);
+  border-bottom-color: var(--apx-accent);
+}
+.apx-projects .apx-card-text {
+  margin: 0;
+  color: var(--apx-muted);
+  font-size: 0.95rem;
+}
+.apx-projects .apx-card-cta {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+.apx-projects .apx-link {
+  color: var(--apx-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.apx-projects .apx-link:hover {
+  text-decoration: underline;
+}
+.apx-projects {
+  /* Badges */
+}
+.apx-projects .apx-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.apx-projects .apx-badges li {
+  font-size: 0.78rem;
+  color: var(--apx-text);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--apx-line);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+}
+.apx-projects {
+  /* ===========================
+     VARIANTS: Flagship vs More
+     =========================== */
+  /* FLAGSHIP: bigger grid + media + type scale */
+}
+.apx-projects .apx-flagship {
+  /* Make flagship cards bigger on desktop: 2-up at wide, 1-up on smaller */
+}
+.apx-projects .apx-flagship .apx-flagship-grid {
+  /* override the base grid to bigger cards */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.4rem);
+}
+.apx-projects .apx-flagship {
+  /* more cinematic media */
+}
+.apx-projects .apx-flagship .apx-card-media {
+  aspect-ratio: 21/9;
+}
+.apx-projects .apx-flagship .apx-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(5, 7, 10, 0.55) 100%);
+  pointer-events: none;
+}
+.apx-projects .apx-flagship .apx-card-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+.apx-projects .apx-flagship .apx-card-title {
+  font-size: 1.2rem;
+}
+.apx-projects {
+  /* MORE BUILDS: tighter grid + smaller type */
+}
+.apx-projects .apx-more .apx-more-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(0.7rem, 1.6vw, 1rem);
+}
+.apx-projects .apx-more .apx-card-media {
+  aspect-ratio: 4/3;
+}
+.apx-projects .apx-more .apx-card-body {
+  padding: 0.8rem 0.9rem 1rem;
+}
+.apx-projects .apx-more .apx-card-title {
+  font-size: 1rem;
+}
+.apx-projects .apx-more .apx-badges li {
+  color: var(--apx-muted);
+}
+.apx-projects {
+  /* Responsiveness */
+}
+@media (min-width: 900px) {
+  .apx-projects .apx-card-body {
+    padding: 1rem 1.1rem 1.2rem;
+  }
+}
+@media (max-width: 560px) {
+  .apx-projects .apx-intro {
+    font-size: 0.95rem;
+  }
+  .apx-projects .apx-card-title {
+    font-size: 1rem;
+  }
+  .apx-projects { /* base fall-back for very small screens */ }
+}
+.apx-projects {
+  /* Optional: cap flagship card width for nicer balance on ultra-wide */
+}
+@media (min-width: 1200px) {
+  .apx-projects .apx-flagship .apx-card {
+    max-width: 720px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
