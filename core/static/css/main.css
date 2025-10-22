@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================
    GLOBAL VARIABLES
    ========================================== */
@@ -127,6 +128,141 @@ a:hover, a:focus {
   * {
     transition: none !important;
     animation: none !important;
+  }
+}
+/* ===========================
+   HOME PAGE (scoped)
+   =========================== */
+.home-page .cv-container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 16px;
+}
+.home-page {
+  /* Profile */
+}
+.home-page .cv-profile-img {
+  border-radius: 50%;
+  border: 5px solid #e0e0e0;
+}
+.home-page .cv-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+.home-page .cv-title {
+  font-weight: 500;
+  color: #1e90ff;
+  margin-bottom: 0.25rem;
+}
+.home-page .cv-location {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: -6px;
+}
+.home-page {
+  /* Sections */
+}
+.home-page .cv-section {
+  margin-top: 32px;
+}
+.home-page .cv-section-title {
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid #2a2a2a;
+}
+.home-page {
+  /* Experience & Education blocks */
+}
+.home-page .cv-experience,
+.home-page .cv-education {
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 16px;
+}
+.home-page .cv-job-title,
+.home-page .cv-degree {
+  font-weight: 600;
+  color: #ffffff;
+}
+.home-page .cv-company,
+.home-page .cv-school {
+  font-size: 1.05rem;
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+}
+.home-page {
+  /* Lists */
+}
+.home-page .cv-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.home-page .cv-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 1em;
+}
+.home-page .cv-list li::before {
+  content: "•";
+  color: #1e90ff;
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: 0;
+}
+.home-page {
+  /* Other qualifications */
+}
+.home-page .cv-subsection-title {
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #2a2a2a;
+}
+.home-page .cv-qualifications {
+  list-style: none;
+  padding-left: 0;
+}
+.home-page .cv-qualifications li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+.home-page {
+  /* Skills */
+}
+.home-page .cv-skill {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 15px;
+  color: #e0e0e0;
+}
+.home-page .cv-skill p {
+  line-height: 1.6;
+}
+.home-page .cv-skill-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.home-page .cv-skill-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.home-page {
+  /* Legacy helper */
+}
+.home-page .main-container {
+  min-height: 550px;
+}
+.home-page {
+  /* Responsive */
+}
+@media (max-width: 768px) {
+  .home-page .cv-skill {
+    padding: 10px;
   }
 }
 

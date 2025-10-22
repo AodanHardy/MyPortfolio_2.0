@@ -1,0 +1,137 @@
+@use 'variables' as *;
+
+/* ===========================
+   HOME PAGE (scoped)
+   =========================== */
+
+.home-page {
+  .cv-container {
+    max-width: $container-max;
+    margin-inline: auto;
+    padding: $spacing-md;
+  }
+
+  /* Profile */
+  .cv-profile-img {
+    border-radius: 50%;
+    border: 5px solid $color-text;
+  }
+
+  .cv-name {
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+  }
+
+  .cv-title {
+    font-weight: $font-weight-medium;
+    color: $color-accent;
+    margin-bottom: .25rem;
+  }
+
+  .cv-location {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-top: -6px;
+  }
+
+  /* Sections */
+  .cv-section { margin-top: $spacing-xl; }
+
+  .cv-section-title {
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+    border-bottom: 2px solid $color-border;
+  }
+
+  /* Experience & Education blocks */
+  .cv-experience,
+  .cv-education {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+  }
+
+  .cv-job-title,
+  .cv-degree {
+    font-weight: 600;
+    color: $color-heading;
+  }
+
+  .cv-company,
+  .cv-school {
+    font-size: 1.05rem;
+    color: $color-text-muted;
+    margin-bottom: .5rem;
+  }
+
+  /* Lists */
+  .cv-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 1em;
+
+      &::before {
+        content: "•";
+        color: $color-accent;
+        font-weight: 700;
+        display: inline-block;
+        width: 1em;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  /* Other qualifications */
+  .cv-subsection-title {
+    font-weight: 600;
+    color: $color-heading;
+    border-bottom: 2px solid $color-border;
+  }
+
+  .cv-qualifications {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: $color-text;
+    }
+  }
+
+  /* Skills */
+  .cv-skill {
+    background-color: $color-surface-alt;
+    border-radius: $radius-md;
+    padding: 15px;
+    color: $color-text;
+
+    p { line-height: 1.6; }
+  }
+
+  .cv-skill-title {
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+    margin-bottom: 10px;
+  }
+
+  .cv-skill-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Legacy helper */
+  .main-container { min-height: 550px; }
+
+  /* Responsive */
+  @media (max-width: $bp-tablet) {
+    .cv-skill { padding: 10px; }
+  }
+}

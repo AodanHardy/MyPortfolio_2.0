@@ -2,165 +2,167 @@
 {% load static %}
 
 {% block body %}
-<div class="cv-container mt-5 text-light">
-  <!-- Profile / Intro -->
-  <div class="row align-items-start">
-    <div class="col-md-4 text-center">
-      <img src="{% static '/images/me2.png' %}" height="200" width="200" alt="Profile picture of Aodán Hardy" class="cv-profile-img mb-3">
-      <h2 class="cv-name">Aodán Hardy</h2>
-      <p class="lead cv-title">Software Engineer</p>
-      <p class="cv-location">Based in the UK · Remote-friendly</p>
+<div class="home-page">
+  <div class="cv-container mt-5 text-light">
+    <!-- Profile / Intro -->
+    <div class="row align-items-start">
+      <div class="col-md-4 text-center">
+        <img src="{% static '/images/me2.png' %}" height="200" width="200" alt="Profile picture of Aodán Hardy" class="cv-profile-img mb-3">
+        <h2 class="cv-name">Aodán Hardy</h2>
+        <p class="lead cv-title">Software Engineer</p>
+        <p class="cv-location">Based in the UK · Remote-friendly</p>
+      </div>
+
+      <div class="col-md-8">
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">Welcome</h3>
+        <p>
+          Hello! This site extends my CV with project write-ups, notes, and the things I’m exploring next.
+          I’m currently a Software Engineer at <strong>Full Fat Things</strong>, working across modern web stacks and
+          collaborating with product and design to ship reliable features. If anything here piques your interest,
+          feel free to get in touch.
+        </p>
+
+        <!-- About -->
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">About Me</h3>
+        <p class="cv-about">
+          I’m a graduate software engineer (First Class Hons, Ulster University) now building real-world products
+          at Full Fat Things. I enjoy turning spec into shipped features, improving developer workflows,
+          and learning by doing—whether that’s refactoring, writing tests, or standing up dashboards.
+          My toolkit spans Java/Python/JS plus frameworks like Django and React, and I’m comfortable across
+          CI, containers, and Linux.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-8">
-      <h3 class="cv-section-title border-bottom pb-2 mb-3">Welcome</h3>
-      <p>
-        Hello! This site extends my CV with project write-ups, notes, and the things I’m exploring next.
-        I’m currently a Software Engineer at <strong>Full Fat Things</strong>, working across modern web stacks and
-        collaborating with product and design to ship reliable features. If anything here piques your interest,
-        feel free to get in touch.
-      </p>
+    <!-- Experience -->
+    <div class="cv-section mt-5">
+      <h3 class="cv-section-title border-bottom pb-2 mb-3">Experience</h3>
 
-      <!-- About -->
-      <h3 class="cv-section-title border-bottom pb-2 mb-3">About Me</h3>
-      <p class="cv-about">
-        I’m a graduate software engineer (First Class Hons, Ulster University) now building real-world products
-        at Full Fat Things. I enjoy turning spec into shipped features, improving developer workflows,
-        and learning by doing—whether that’s refactoring, writing tests, or standing up dashboards.
-        My toolkit spans Java/Python/JS plus frameworks like Django and React, and I’m comfortable across
-        CI, containers, and Linux.
-      </p>
-    </div>
-  </div>
-
-  <!-- Experience -->
-  <div class="cv-section mt-5">
-    <h3 class="cv-section-title border-bottom pb-2 mb-3">Experience</h3>
-
-    <div class="container px-0">
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="cv-experience">
-            <h4 class="cv-job-title">Software Engineer</h4>
-            <p class="cv-company">Full Fat Things · Remote · May 2025 – Present</p>
-            <ul class="cv-list">
-              <li>Contribute to client web apps; collaborate with senior engineers on delivery and quality.</li>
-              <li>Work within modern workflows (Git, CI/CD, containers) across Drupal/Wagtail/React stacks.</li>
-              <li>Own tickets end-to-end: scope, implement, test, and iterate with feedback.</li>
-            </ul>
+      <div class="container px-0">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="cv-experience">
+              <h4 class="cv-job-title">Software Engineer</h4>
+              <p class="cv-company">Full Fat Things · Remote · May 2025 – Present</p>
+              <ul class="cv-list">
+                <li>Contribute to client web apps; collaborate with senior engineers on delivery and quality.</li>
+                <li>Work within modern workflows (Git, CI/CD, containers) across Drupal/Wagtail/React stacks.</li>
+                <li>Own tickets end-to-end: scope, implement, test, and iterate with feedback.</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-6 mb-4">
-          <div class="cv-experience">
-            <h4 class="cv-job-title">Intern Software Engineer</h4>
-            <p class="cv-company">Magnite · Belfast · Jul 2023 – Jul 2024</p>
-            <ul class="cv-list">
-              <li>Shipped features for a new reporting system (Insight) in Java (Vert.x).</li>
-              <li>Refactored legacy components aligned to production DB changes; wrote JUnit tests.</li>
-              <li>Built Grafana dashboards for performance monitoring and visibility.</li>
-            </ul>
+          <div class="col-md-6 mb-4">
+            <div class="cv-experience">
+              <h4 class="cv-job-title">Intern Software Engineer</h4>
+              <p class="cv-company">Magnite · Belfast · Jul 2023 – Jul 2024</p>
+              <ul class="cv-list">
+                <li>Shipped features for a new reporting system (Insight) in Java (Vert.x).</li>
+                <li>Refactored legacy components aligned to production DB changes; wrote JUnit tests.</li>
+                <li>Built Grafana dashboards for performance monitoring and visibility.</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-6 mb-4">
-          <div class="cv-experience">
-            <h4 class="cv-job-title">Placement IT / Software Engineer</h4>
-            <p class="cv-company">Rasharkin Women’s Group · Jan 2022 – Jun 2022</p>
-            <ul class="cv-list">
-              <li>Developed a C# attendance system with a MySQL backend.</li>
-              <li>Migrated filing to the cloud to improve efficiency and access.</li>
-            </ul>
+          <div class="col-md-6 mb-4">
+            <div class="cv-experience">
+              <h4 class="cv-job-title">Placement IT / Software Engineer</h4>
+              <p class="cv-company">Rasharkin Women’s Group · Jan 2022 – Jun 2022</p>
+              <ul class="cv-list">
+                <li>Developed a C# attendance system with a MySQL backend.</li>
+                <li>Migrated filing to the cloud to improve efficiency and access.</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <!-- (Optional) Early roles — keep but deprioritised -->
-        <div class="col-md-6 mb-4">
-          <div class="cv-experience">
-            <h4 class="cv-job-title">Sales Advisor</h4>
-            <p class="cv-company">Currys · Coleraine · 2019 – 2021</p>
-            <ul class="cv-list">
-              <li>Customer discovery, solution matching, and target attainment in a team setting.</li>
-            </ul>
+          <!-- Optional early roles -->
+          <div class="col-md-6 mb-4">
+            <div class="cv-experience">
+              <h4 class="cv-job-title">Sales Advisor</h4>
+              <p class="cv-company">Currys · Coleraine · 2019 – 2021</p>
+              <ul class="cv-list">
+                <li>Customer discovery, solution matching, and target attainment in a team setting.</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-6 mb-4">
-          <div class="cv-experience">
-            <h4 class="cv-job-title">Head of Accounts</h4>
-            <p class="cv-company">KBC Foods · Ballymoney · 2019</p>
-            <ul class="cv-list">
-              <li>Managed customer accounts, statements, and issue resolution under time pressure.</li>
-            </ul>
+          <div class="col-md-6 mb-4">
+            <div class="cv-experience">
+              <h4 class="cv-job-title">Head of Accounts</h4>
+              <p class="cv-company">KBC Foods · Ballymoney · 2019</p>
+              <ul class="cv-list">
+                <li>Managed customer accounts, statements, and issue resolution under time pressure.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Education -->
-  <div class="cv-section mt-5">
-    <h3 class="cv-section-title border-bottom pb-2 mb-3">Education</h3>
+    <!-- Education -->
+    <div class="cv-section mt-5">
+      <h3 class="cv-section-title border-bottom pb-2 mb-3">Education</h3>
 
-    <div class="cv-education mb-4">
-      <h4 class="cv-degree">BSc (Hons) Computer Science — First Class (75%)</h4>
-      <p class="cv-school">Ulster University, 2022–2025</p>
-      <p>
-        Final year project: <em>Online blockchain voting system</em> — Python counting algorithms,
-        Django web app, Polygon RPC integration (graded 76%). Key modules include:
-        Algorithms &amp; Data Structures (93%), Computer Vision (80%), Concurrent &amp; Distributed Systems (70%),
-        Mobile Technology (82%), Advanced Mobile Technology (77%), Web Application Development (78%),
-        Object-Oriented Programming (71%).
-      </p>
+      <div class="cv-education mb-4">
+        <h4 class="cv-degree">BSc (Hons) Computer Science — First Class (75%)</h4>
+        <p class="cv-school">Ulster University, 2022–2025</p>
+        <p>
+          Final year project: <em>Online blockchain voting system</em> — Python counting algorithms,
+          Django web app, Polygon RPC integration (graded 76%). Key modules include:
+          Algorithms &amp; Data Structures (93%), Computer Vision (80%), Concurrent &amp; Distributed Systems (70%),
+          Mobile Technology (82%), Advanced Mobile Technology (77%), Web Application Development (78%),
+          Object-Oriented Programming (71%).
+        </p>
+      </div>
+
+      <div class="cv-education mb-4">
+        <h4 class="cv-degree">Foundation Degree in Computing (FdSc) — 2:1</h4>
+        <p class="cv-school">NRC Ballymena, 2020–2022</p>
+      </div>
+
+      <div class="cv-other-qualifications mt-4">
+        <h4 class="cv-subsection-title border-bottom pb-2 mb-3">Other Qualifications</h4>
+        <ul class="cv-qualifications list-unstyled">
+          <li>GCSEs ×7 including Maths &amp; English (A–C).</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="cv-education mb-4">
-      <h4 class="cv-degree">Foundation Degree in Computing (FdSc) — 2:1</h4>
-      <p class="cv-school">NRC Ballymena, 2020–2022</p>
-    </div>
+    <!-- Skills -->
+    <div class="cv-section mt-5">
+      <h3 class="cv-section-title border-bottom pb-2 mb-3">Skills</h3>
 
-    <div class="cv-other-qualifications mt-4">
-      <h4 class="cv-subsection-title border-bottom pb-2 mb-3">Other Qualifications</h4>
-      <ul class="cv-qualifications list-unstyled">
-        <li>GCSEs ×7 including Maths &amp; English (A–C).</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Skills -->
-  <div class="cv-section mt-5">
-    <h3 class="cv-section-title border-bottom pb-2 mb-3">Skills</h3>
-
-    <div class="container px-0">
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="cv-skill">
-            <h4 class="cv-skill-title">Languages</h4>
-            <p class="mb-0">Java, Python, C++, C#, PHP, JavaScript, HTML/CSS, SQL</p>
+      <div class="container px-0">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="cv-skill">
+              <h4 class="cv-skill-title">Languages</h4>
+              <p class="mb-0">Java, Python, C++, C#, PHP, JavaScript, HTML/CSS, SQL</p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-6 mb-4">
-          <div class="cv-skill">
-            <h4 class="cv-skill-title">Frameworks &amp; Tools</h4>
-            <p class="mb-0">Django, React, Vert.x, JUnit, Bootstrap, Tailwind</p>
-            <p class="mb-0">GitHub, Docker, AWS, Heroku, Grafana, Postgres, MySQL, Redis</p>
-            <p class="mb-0">Linux, SSH, Ansible, Drupal, Raspberry&nbsp;Pi</p>
+          <div class="col-md-6 mb-4">
+            <div class="cv-skill">
+              <h4 class="cv-skill-title">Frameworks &amp; Tools</h4>
+              <p class="mb-0">Django, React, Vert.x, JUnit, Bootstrap, Tailwind</p>
+              <p class="mb-0">GitHub, Docker, AWS, Heroku, Grafana, Postgres, MySQL, Redis</p>
+              <p class="mb-0">Linux, SSH, Ansible, Drupal, Raspberry&nbsp;Pi</p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-12 mb-4">
-          <div class="cv-skill">
-            <h4 class="cv-skill-title">How I Work</h4>
-            <p class="cv-skill-description mb-0">
-              Collaborative, test-minded, and pragmatic. Comfortable picking up unfamiliar code,
-              breaking work into shippable increments, and communicating clearly with stakeholders.
-            </p>
+          <div class="col-md-12 mb-4">
+            <div class="cv-skill">
+              <h4 class="cv-skill-title">How I Work</h4>
+              <p class="cv-skill-description mb-0">
+                Collaborative, test-minded, and pragmatic. Comfortable picking up unfamiliar code,
+                breaking work into shippable increments, and communicating clearly with stakeholders.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>
 {% endblock %}
