@@ -1,72 +1,74 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="container mt-5">
-  <h2 class="experience-title mb-4">Professional Experience</h2>
+<div class="experience-page">
+  <div class="container mt-5">
+    <h2 class="experience-title mb-4">Professional Experience</h2>
 
-  <section class="exp-timeline" aria-label="Work history">
-    <!-- Full Fat Things -->
-    <article class="experience-item" itemscope itemtype="https://schema.org/JobPosting">
-      <header>
-        <h3 class="placement-heading" itemprop="title">Software Engineer</h3>
-        <h4 class="placement-subtitle">
-          <span itemprop="hiringOrganization">Full Fat Things</span> · Remote ·
-          <time itemprop="datePosted" datetime="2025-05">May 2025</time> – <span>Present</span>
-        </h4>
-      </header>
-      <div class="placement-content">
-        <ul class="placement-bullets">
-          <li>Contribute to client web apps across Drupal/Wagtail/React; collaborate with seniors on delivery & quality.</li>
-          <li>Own tickets end-to-end: scope, implement, review, test; ship iterative improvements with clear comms.</li>
-          <li>Use GitHub Actions, Docker; assist with perf/observability fixes when needed.</li>
-        </ul>
-        <ul class="tag-list" aria-label="Tools used">
-          <li class="tag">Drupal</li><li class="tag">Wagtail</li><li class="tag">React</li>
-          <li class="tag">Docker</li><li class="tag">Postgres</li><li class="tag">Linux</li>
-        </ul>
-      </div>
-    </article>
+    <section class="exp-timeline" aria-label="Work history">
+      <!-- Full Fat Things -->
+      <article class="experience-item" itemscope itemtype="https://schema.org/JobPosting">
+        <header>
+          <h3 class="placement-heading" itemprop="title">Software Engineer</h3>
+          <h4 class="placement-subtitle">
+            <span itemprop="hiringOrganization">Full Fat Things</span> · Remote ·
+            <time itemprop="datePosted" datetime="2025-05">May 2025</time> – <span>Present</span>
+          </h4>
+        </header>
+        <div class="placement-content">
+          <ul class="placement-bullets">
+            <li>Contribute to client web apps across Drupal/Wagtail/React; collaborate with seniors on delivery &amp; quality.</li>
+            <li>Own tickets end-to-end: scope, implement, review, test; ship iterative improvements with clear comms.</li>
+            <li>Use GitHub Actions, Docker; assist with perf/observability fixes when needed.</li>
+          </ul>
+          <ul class="tag-list" aria-label="Tools used">
+            <li class="tag">Drupal</li><li class="tag">Wagtail</li><li class="tag">React</li>
+            <li class="tag">Docker</li><li class="tag">Postgres</li><li class="tag">Linux</li>
+          </ul>
+        </div>
+      </article>
 
-    <!-- Magnite -->
-    <article class="experience-item">
-      <header>
-        <h3 class="placement-heading">Intern Software Engineer</h3>
-        <h4 class="placement-subtitle">Magnite · Belfast · Jul 2023 – Jul 2024</h4>
-      </header>
-      <div class="placement-content">
-        <p class="placement-paragraph">
-          Joined the SSR/Insight team to help build the next-gen reporting system and migrate from legacy.
-        </p>
-        <h5 class="placement-subheading">Impact</h5>
-        <ul class="placement-bullets">
-          <li>Built CSV comparison test harness; improved pass rate from ~10% → 90%+ after refactor.</li>
-          <li>Lifted automated coverage with targeted JUnit suites on high-risk paths.</li>
-          <li>Created focused Grafana dashboard (throughput, system split, timings, failures, harness results).</li>
-        </ul>
-        <ul class="tag-list">
-          <li class="tag">Java</li><li class="tag">Vert.x</li><li class="tag">JUnit</li>
-          <li class="tag">Grafana</li><li class="tag">Postgres</li>
-        </ul>
-      </div>
-    </article>
+      <!-- Magnite -->
+      <article class="experience-item">
+        <header>
+          <h3 class="placement-heading">Intern Software Engineer</h3>
+          <h4 class="placement-subtitle">Magnite · Belfast · Jul 2023 – Jul 2024</h4>
+        </header>
+        <div class="placement-content">
+          <p class="placement-paragraph">
+            Joined the SSR/Insight team to help build the next-gen reporting system and migrate from legacy.
+          </p>
+          <h5 class="placement-subheading">Impact</h5>
+          <ul class="placement-bullets">
+            <li>Built CSV comparison test harness; improved pass rate from ~10% → 90%+ after refactor.</li>
+            <li>Lifted automated coverage with targeted JUnit suites on high-risk paths.</li>
+            <li>Created focused Grafana dashboard (throughput, system split, timings, failures, harness results).</li>
+          </ul>
+          <ul class="tag-list">
+            <li class="tag">Java</li><li class="tag">Vert.x</li><li class="tag">JUnit</li>
+            <li class="tag">Grafana</li><li class="tag">Postgres</li>
+          </ul>
+        </div>
+      </article>
 
-    <!-- Rasharkin -->
-    <article class="experience-item">
-      <header>
-        <h3 class="placement-heading">Placement IT / Software Engineer</h3>
-        <h4 class="placement-subtitle">Rasharkin Women’s Group · Jan 2022 – Jun 2022</h4>
-      </header>
-      <div class="placement-content">
-        <ul class="placement-bullets">
-          <li>Built a C# attendance system (MySQL) with tailored reporting (invoices, returns, oversight).</li>
-          <li>Migrated filing to shared cloud; onboarded staff with docs & security guidance.</li>
-          <li>Modernised desktop setup and provided light user support.</li>
-        </ul>
-        <ul class="tag-list">
-          <li class="tag">C#</li><li class="tag">MySQL</li><li class="tag">Windows</li><li class="tag">Docs</li>
-        </ul>
-      </div>
-    </article>
-  </section>
+      <!-- Rasharkin -->
+      <article class="experience-item">
+        <header>
+          <h3 class="placement-heading">Placement IT / Software Engineer</h3>
+          <h4 class="placement-subtitle">Rasharkin Women’s Group · Jan 2022 – Jun 2022</h4>
+        </header>
+        <div class="placement-content">
+          <ul class="placement-bullets">
+            <li>Built a C# attendance system (MySQL) with tailored reporting (invoices, returns, oversight).</li>
+            <li>Migrated filing to shared cloud; onboarded staff with docs &amp; security guidance.</li>
+            <li>Modernised desktop setup and provided light user support.</li>
+          </ul>
+          <ul class="tag-list">
+            <li class="tag">C#</li><li class="tag">MySQL</li><li class="tag">Windows</li><li class="tag">Docs</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </div>
 </div>
 {% endblock %}
