@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+/* ===========================
+   ABOUT PAGE (scoped)
+   =========================== */
+
+.about-page {
+  .container { max-width: 800px; }
+
+  .about-header {
+    margin-bottom: $spacing-md;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+    border-bottom: 2px solid $color-border;
+    padding-bottom: .6rem;
+    margin-bottom: .25rem;
+  }
+
+  .about-kicker {
+    color: $color-text-muted;
+    margin: 0 0 $spacing-md 0;
+    font-size: 1.05rem;
+  }
+
+  .about-content {
+    font-size: 1.1rem;
+    color: $color-text;
+    line-height: 1.8;
+  }
+
+  .about-heading {
+    font-size: 1.35rem;
+    font-weight: $font-weight-bold;
+    color: $color-accent;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-sm;
+  }
+
+  .about-paragraph,
+  .about-introduction {
+    margin-bottom: $spacing-md;
+  }
+
+  /* Subtle callout style (optional, easy to reuse) */
+  .about-callout {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+    color: $color-text;
+  }
+
+  @media (max-width: $bp-tablet) {
+    .about-title { font-size: 2rem; }
+    .about-content { font-size: 1.05rem; }
+  }
+}

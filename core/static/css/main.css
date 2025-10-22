@@ -266,4 +266,61 @@ a:hover, a:focus {
   }
 }
 
+/* ===========================
+   ABOUT PAGE (scoped)
+   =========================== */
+.about-page .container {
+  max-width: 800px;
+}
+.about-page .about-header {
+  margin-bottom: 16px;
+}
+.about-page .about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+.about-page .about-kicker {
+  color: #b0b0b0;
+  margin: 0 0 16px 0;
+  font-size: 1.05rem;
+}
+.about-page .about-content {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+}
+.about-page .about-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e90ff;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+.about-page .about-paragraph,
+.about-page .about-introduction {
+  margin-bottom: 16px;
+}
+.about-page {
+  /* Subtle callout style (optional, easy to reuse) */
+}
+.about-page .about-callout {
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 16px;
+  color: #e0e0e0;
+}
+@media (max-width: 768px) {
+  .about-page .about-title {
+    font-size: 2rem;
+  }
+  .about-page .about-content {
+    font-size: 1.05rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
