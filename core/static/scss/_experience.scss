@@ -47,7 +47,7 @@
   }
 
   .experience-item:hover {
-    border-color: mix($color-border, #fff, 70%);
+    border-color: $color-border;
     box-shadow: 0 10px 28px rgba(0,0,0,.35);
     transform: translateY(-1px);
   }

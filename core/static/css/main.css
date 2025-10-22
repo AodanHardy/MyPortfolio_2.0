@@ -371,7 +371,7 @@ a:hover, a:focus {
   /* intentionally NO ::before marker — you asked to remove it */
 }
 .experience-page .experience-item:hover {
-  border-color: rgb(105.9, 105.9, 105.9);
+  border-color: #2a2a2a;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   transform: translateY(-1px);
 }
@@ -739,6 +739,102 @@ a:hover, a:focus {
 @media (min-width: 1200px) {
   .apx-projects .apx-flagship .apx-card {
     max-width: 720px;
+  }
+}
+
+/* CONTACT PAGE — Scoped + higher specificity override */
+.apx-contact {
+  /* tokens (matches your dark theme) */
+  --c-bg: #121212;
+  --c-text: #e0e0e0;
+  --c-heading: #ffffff;
+  --c-accent: #1e90ff;
+  --c-line: #4a4a4a;
+  background: var(--c-bg);
+  color: var(--c-text);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+.apx-contact .apx-contact__container {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+.apx-contact {
+  /* Title */
+}
+.apx-contact :is(.contact-title) {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--c-heading);
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--c-line);
+  padding-bottom: 10px;
+}
+.apx-contact {
+  /* Info */
+}
+.apx-contact :is(.contact-info) {
+  font-size: 1.15rem;
+  color: var(--c-text);
+  margin-bottom: 2rem;
+}
+.apx-contact :is(.contact-email) {
+  margin-bottom: 1.1rem;
+}
+.apx-contact :is(.contact-email) a {
+  color: var(--c-accent);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.apx-contact :is(.contact-email) a:hover {
+  color: #ffffff;
+}
+.apx-contact {
+  /* Social */
+}
+.apx-contact :is(.social-links) {
+  margin-top: 2rem;
+}
+.apx-contact :is(.social-title) {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--c-heading);
+  margin-bottom: 1rem;
+}
+.apx-contact :is(.social-list) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem 1.25rem;
+  flex-wrap: wrap;
+}
+.apx-contact :is(.social-link) {
+  font-size: 1.2rem;
+  color: var(--c-text);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+.apx-contact :is(.social-link) i {
+  font-size: 1.4rem;
+}
+.apx-contact :is(.social-link):hover {
+  color: var(--c-accent);
+  transform: translateY(-2px);
+}
+.apx-contact {
+  /* Mobile tweaks */
+}
+@media (max-width: 600px) {
+  .apx-contact :is(.contact-title) {
+    font-size: 2rem;
+  }
+  .apx-contact :is(.social-list) {
+    flex-direction: column;
+    gap: 0.6rem;
   }
 }
 
