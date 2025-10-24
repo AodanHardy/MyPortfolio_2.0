@@ -16,3 +16,7 @@ def contact(request):
 
 def projects(request):
     return render(request, "projects.html")
+
+
+def nextGenVoting(request):
+    return render(request, "projects/nextGenVoting.html")
