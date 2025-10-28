@@ -5,24 +5,18 @@
   <div class="apx-container">
     <!-- Hero -->
     <header class="apx-hero">
-      <p class="apx-eyebrow">Selected Work</p>
       <h1 id="apx-projects-title" class="apx-title">
-        Building thoughtful, fast, and maintainable web experiences.
+        Some of my projects.
       </h1>
       <p class="apx-intro">
-        A mix of personal and experimental projects — from full builds to smaller ideas I’ve enjoyed developing.
+        Just some of the work i have done and explanations.
       </p>
     </header>
 
-    <!-- Projects Grid (2 per row, wider cards) -->
+    <!-- Projects -->
     <section class="apx-section" aria-labelledby="apx-projects-heading">
-      <div class="apx-section-head">
-        <h2 id="apx-projects-heading" class="apx-section-title">Projects</h2>
-        <p class="apx-section-subtitle">All in one uniform two-column grid.</p>
-      </div>
 
       <div class="apx-grid apx-grid--wide">
-        <!-- Repeatable card -->
         <article class="apx-card">
           <a class="apx-card-media" href="{% url 'nextgenvoting' %}">
             <img src="https://picsum.photos/1200/675?random=12" alt="Preview of NextGenVoting">
@@ -37,24 +31,24 @@
             </p>
             <div class="apx-card-cta">
               <a class="apx-link" href="{% url 'nextgenvoting' %}">Read more</a>
-              <a class="apx-link" href="#">GitHub ↗</a>
+              <a class="apx-link" href="https://github.com/AodanHardy/NextGenVoting">GitHub ↗</a>
             </div>
           </div>
         </article>
 
         <article class="apx-card">
-          <a class="apx-card-media" href="#">
+          <a class="apx-card-media" href="{% url 'restaurantManagementSyetem' %}">
             <img src="https://picsum.photos/1200/675?random=14" alt="Restaurant Management System">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">Restaurant Management System</a></h3>
+            <h3 class="apx-card-title"><a href="{% url 'restaurantManagementSyetem' %}">Restaurant Management System</a></h3>
             <ul class="apx-badges"><li>Java</li><li>Spring Boot</li></ul>
             <p class="apx-card-text">
               Multi-role dashboard, order flow, and reporting with a clean domain model.
             </p>
             <div class="apx-card-cta">
-              <a class="apx-link" href="#">Read more</a>
-              <a class="apx-link" href="#">GitHub ↗</a>
+              <a class="apx-link" href="{% url 'restaurantManagementSyetem' %}">Read more</a>
+              <a class="apx-link" href="https://github.com/AodanHardy/RestaurantManagementSystem">GitHub ↗</a>
             </div>
           </div>
         </article>
@@ -118,6 +112,55 @@
             </div>
           </div>
         </article>
+
+          <!-- Sports App -->
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=25" alt="Sports app screens">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Sports App</a></h3>
+            <ul class="apx-badges"><li>Android</li><li>Java</li></ul>
+            <p class="apx-card-text">Fixtures, results, and simple leaderboards.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Flag Game App -->
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=26" alt="Flag Game App">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Flag Game App</a></h3>
+            <ul class="apx-badges"><li>Android</li><li>Java</li></ul>
+            <p class="apx-card-text">Timed quiz with incremental difficulty.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CreditSystem -->
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/600?random=27" alt="Credit system CLI">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">CreditSystem</a></h3>
+            <ul class="apx-badges"><li>Python</li></ul>
+            <p class="apx-card-text">Data model practice and CLI workflows.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
   </div>

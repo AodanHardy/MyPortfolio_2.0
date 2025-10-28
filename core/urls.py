@@ -10,5 +10,6 @@ urlpatterns = [
     path("projects/", views.projects, name="projects"),
 
     path("projects/nextGenVoting", views.nextGenVoting, name="nextgenvoting"),
+    path("projects/restaurantManagementSyetem", views.restaurantManagementSyetem, name="restaurantManagementSyetem"),
 
 ]

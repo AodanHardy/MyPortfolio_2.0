@@ -20,3 +20,7 @@ def projects(request):
 
 def nextGenVoting(request):
     return render(request, "projects/nextGenVoting.html")
+
+
+def restaurantManagementSyetem(request):
+    return render(request, "projects/restaurantManagementSyetem.html")
