@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
 <section class="apx-projects" aria-labelledby="apx-projects-title">
   <div class="apx-container">
-    <!-- Hero / Intro -->
+    <!-- Hero -->
     <header class="apx-hero">
       <p class="apx-eyebrow">Selected Work</p>
       <h1 id="apx-projects-title" class="apx-title">
@@ -15,72 +14,29 @@
       </p>
     </header>
 
-    <!-- MAJOR PROJECTS -->
-    <section class="apx-section apx-flagship" aria-labelledby="apx-flagship-heading">
+    <!-- Projects Grid (2 per row, wider cards) -->
+    <section class="apx-section" aria-labelledby="apx-projects-heading">
       <div class="apx-section-head">
-        <h2 id="apx-flagship-heading" class="apx-section-title">Major Projects</h2>
-        <p class="apx-section-subtitle">Larger builds and longer-term work.</p>
+        <h2 id="apx-projects-heading" class="apx-section-title">Projects</h2>
+        <p class="apx-section-subtitle">All in one uniform two-column grid.</p>
       </div>
 
-      <div class="apx-grid apx-flagship-grid">
-
+      <div class="apx-grid apx-grid--wide">
+        <!-- Repeatable card -->
         <article class="apx-card">
-          <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/1200/600?random=12" alt="Preview of the product finder interface">
+          <a class="apx-card-media" href="{% url 'nextgenvoting' %}">
+            <img src="https://picsum.photos/1200/675?random=12" alt="Preview of NextGenVoting">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href='{% url 'nextgenvoting' %}'>NextGenVoting</a></h3>
+            <h3 class="apx-card-title"><a href="{% url 'nextgenvoting' %}">NextGenVoting</a></h3>
             <ul class="apx-badges">
               <li>Python</li><li>Django</li><li>Postgres</li><li>Blockchain</li>
             </ul>
             <p class="apx-card-text">
-              Filterable grid with dynamic pagination and Muuri.js layout — tuned for speed and clarity.
+              Trust-focused online voting prototype with audited flows and a clear results UI.
             </p>
             <div class="apx-card-cta">
-              <a class="apx-link" href="#">View More</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="apx-card">
-          <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/1200/600?random=14" alt="Locator map interface">
-          </a>
-          <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">Restaurant Management System</a></h3>
-            <ul class="apx-badges">
-              <li>Java</li><li>SpringBoot</li>
-            </ul>
-            <p class="apx-card-text">
-              Integrated mapping and search features with scalable data migrations.
-            </p>
-            <div class="apx-card-cta">
-              <a class="apx-link" href="#">View More</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- MORE BUILDS -->
-    <section class="apx-section apx-more" aria-labelledby="apx-more-heading">
-      <div class="apx-section-head">
-        <h2 id="apx-more-heading" class="apx-section-title">More Builds</h2>
-        <p class="apx-section-subtitle">Smaller projects, side experiments, and learning exercises.</p>
-      </div>
-
-      <div class="apx-grid apx-grid--side apx-more-grid">
-        <article class="apx-card">
-          <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/900/675?random=21" alt="Rust CLI terminal preview">
-          </a>
-          <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">Rust Algorithms and data structures</a></h3>
-            <ul class="apx-badges">
-              <li>Rust</li>
-            </ul>
-            <p class="apx-card-text">Experimenting with fast, memory-safe tools and algorithmic benchmarks.</p>
-            <div class="apx-card-cta">
+              <a class="apx-link" href="{% url 'nextgenvoting' %}">Read more</a>
               <a class="apx-link" href="#">GitHub ↗</a>
             </div>
           </div>
@@ -88,103 +44,80 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/900/675?random=22" alt="Restaurant template preview">
+            <img src="https://picsum.photos/1200/675?random=14" alt="Restaurant Management System">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">Flappy Bird</a></h3>
-            <ul class="apx-badges">
-              <li>C++</li>
-            </ul>
-            <p class="apx-card-text">Multi-tenant templates for restaurants with a simple admin.</p>
+            <h3 class="apx-card-title"><a href="#">Restaurant Management System</a></h3>
+            <ul class="apx-badges"><li>Java</li><li>Spring Boot</li></ul>
+            <p class="apx-card-text">
+              Multi-role dashboard, order flow, and reporting with a clean domain model.
+            </p>
             <div class="apx-card-cta">
               <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
             </div>
           </div>
         </article>
 
         <article class="apx-card">
           <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
+            <img src="https://picsum.photos/1200/675?random=21" alt="Rust CLI terminal preview">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">SpaceInvaders</a></h3>
-            <ul class="apx-badges">
-              <li>Rust</li>
-            </ul>
-            <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
+            <h3 class="apx-card-title"><a href="#">Rust Algorithms and Data Structures</a></h3>
+            <ul class="apx-badges"><li>Rust</li></ul>
+            <p class="apx-card-text">Experimenting with fast, memory-safe tools and algorithmic benchmarks.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
             </div>
           </div>
         </article>
 
-
-          <article class="apx-card">
+        <article class="apx-card">
           <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
+            <img src="https://picsum.photos/1200/675?random=22" alt="Flappy Bird clone">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Flappy Bird</a></h3>
+            <ul class="apx-badges"><li>C++</li></ul>
+            <p class="apx-card-text">Simple arcade mechanics using SFML — focus on timing and physics loops.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/675?random=23" alt="Space Invaders remake">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="#">Space Invaders</a></h3>
+            <ul class="apx-badges"><li>Rust</li></ul>
+            <p class="apx-card-text">Rebuilt my final-year project into a modern Rust-based game loop.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="apx-card">
+          <a class="apx-card-media" href="#">
+            <img src="https://picsum.photos/1200/675?random=24" alt="TCP server diagram">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="#">TCP Server</a></h3>
-            <ul class="apx-badges">
-              <li>Java</li><li>Multithreading</li>
-            </ul>
-            <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
+            <ul class="apx-badges"><li>Java</li><li>Multithreading</li></ul>
+            <p class="apx-card-text">Thread-per-connection architecture and graceful shutdown management.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="#">Read more</a>
+              <a class="apx-link" href="#">GitHub ↗</a>
             </div>
           </div>
         </article>
-
-          <article class="apx-card">
-          <a class="apx-card-media" href="#">
-            <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
-          </a>
-          <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="#">Sports App</a></h3>
-            <ul class="apx-badges">
-              <li>Android</li><li>Java</li>
-            </ul>
-            <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
-            <div class="apx-card-cta">
-              <a class="apx-link" href="#">Read more</a>
-            </div>
-          </div>
-        </article>
-
-      <article class="apx-card">
-      <a class="apx-card-media" href="#">
-        <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
-      </a>
-      <div class="apx-card-body">
-        <h3 class="apx-card-title"><a href="#">Flag Game App</a></h3>
-        <ul class="apx-badges">
-          <li>Android</li><li>Java</li>
-        </ul>
-        <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
-        <div class="apx-card-cta">
-          <a class="apx-link" href="#">Read more</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="apx-card">
-      <a class="apx-card-media" href="#">
-        <img src="https://picsum.photos/900/675?random=23" alt="Voting system results interface">
-      </a>
-      <div class="apx-card-body">
-        <h3 class="apx-card-title"><a href="#">CreditSystem</a></h3>
-        <ul class="apx-badges">
-          <li>Python</li>
-        </ul>
-        <p class="apx-card-text">Rebuilt my final-year project into a modern full-stack app with Rust logic.</p>
-        <div class="apx-card-cta">
-          <a class="apx-link" href="#">Read more</a>
-        </div>
-      </div>
-    </article>
-
-
-
       </div>
     </section>
   </div>
