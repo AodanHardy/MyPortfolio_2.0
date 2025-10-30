@@ -1,9 +1,76 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block body %}
+<section class="rms-page">
 
+  <!-- ===== HERO ===== -->
+  <header class="rms-hero">
+    <div class="rms-hero__inner container">
+      <div class="rms-hero__copy">
+        <h1 class="rms-title">Restaurant Management System</h1>
+        <p class="rms-subtitle">
+          An idea I had for my final year project before deciding to go with something else.
+          It’s a full restaurant system for handling orders, tables, and payments — all driven by a Java backend.
+        </p>
+      </div>
 
-    restaurant management system
+      <div class="rms-hero__art">
+        <img class="rms-hero__img"
+             src="{% static 'images/rms/hero.png' %}"
+             alt="Restaurant system concept">
+        <!-- Replace with a concept or UI image -->
+      </div>
+    </div>
+  </header>
 
+  <!-- ===== OVERVIEW ===== -->
+  <section class="rms-summary container">
+    <div class="rms-card">
+      <h2 class="rms-h2">Overview</h2>
+      <p>
+        The goal was to build a lightweight system where staff could take orders and automatically route them
+        to the correct place — either the bar or the kitchen. The backend is written in Java with a clean DAO
+        layer, and data stored in PostgreSQL.
+      </p>
+      <p>
+        I still plan to finish it as a small side project — turning it into a public API and building a mobile
+        app to connect to it. The app will let staff log in, select a table, place an order, and instantly send
+        drinks to the bar or food to the kitchen.
+      </p>
+    </div>
+  </section>
 
+  <!-- ===== FUTURE PLANS ===== -->
+  <section class="rms-future container">
+    <h2 class="rms-h2">Next steps</h2>
+    <ul class="rms-bullets">
+      <li>Finish REST API layer for orders, tables, and payments.</li>
+      <li>Develop a companion mobile app for staff devices.</li>
+      <li>Use WebSockets or MQTT to push new orders live to the bar or kitchen displays.</li>
+      <li>Add a lightweight admin panel for reports and menu updates.</li>
+    </ul>
+
+    <div class="rms-hero__art">
+      <img class="rms-hero__img"
+           src="{% static 'images/rms/app-preview.png' %}"
+           alt="Mobile app concept">
+      <!-- Replace with app mock-up or API diagram -->
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="rms-footer-cta container">
+    <div class="rms-card rms-card--cta">
+      <div>
+        <h3 class="rms-h3">Code</h3>
+        <p>The Java backend is available on GitHub. The app will follow soon.</p>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/YourUser/RestaurantManagementSystem" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+    </div>
+  </section>
+
+</section>
 {% endblock %}

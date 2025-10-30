@@ -1,16 +1,152 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block body %}
-next gen voting
+<section class="ngv-page">
 
+  <!-- ===== HERO ===== -->
+  <header class="ngv-hero">
+    <div class="ngv-hero__inner container">
+      <div class="ngv-hero__copy">
+        <h1 class="ngv-title">NextGen Voting</h1>
+        <p class="ngv-subtitle">
+          A blockchain-based voting system I built in Django to test how encryption
+          and smart contracts could be used to make online elections more secure and transparent.
+        </p>
+        <div class="ngv-cta">
+          <a class="btn btn-primary" href="https://github.com/YourUser/NextGenVoting" target="_blank" rel="noreferrer">
+            View Code
+          </a>
+          <a class="btn btn-outline-secondary" href="#how-it-works">How it works</a>
+        </div>
+      </div>
 
-    <br>
-    maybe description
+      <div class="ngv-hero__art">
+        <img class="ngv-hero__img"
+             src="{% static 'images/nextgenvoting/hero.png' %}"
+             alt="Voting system hero image">
+        <!-- Replace with a screenshot or concept image -->
+      </div>
+    </div>
+  </header>
 
+  <!-- ===== OVERVIEW ===== -->
+  <section class="ngv-summary container">
+    <div class="ngv-card">
+      <h2 class="ngv-h2">Overview</h2>
+      <p>
+        I wanted to see how a voting system could work if every vote was both encrypted and
+        recorded on a public blockchain. The whole project runs in Django, with an async
+        manager that handles writes to the Polygon network. Ballots are encrypted with Fernet
+        before they ever touch the database or chain.
+      </p>
+      <p>
+        The system supports a few counting methods (like ranked choice) and is built around
+        a clean structure that keeps the backend easy to extend.
+      </p>
+    </div>
+  </section>
 
-    maybe upload the powerpoint and add some sort of viewer
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="ngv-how container" id="how-it-works">
+    <h2 class="ngv-h2">How it works</h2>
+    <ol class="ngv-steps">
+      <li>Users fill out a ballot form in Django.</li>
+      <li>The vote data is encrypted before it’s saved.</li>
+      <li>An async Blockchain Manager sends the encrypted hash to Polygon.</li>
+      <li>Once confirmed, results can be tallied using different algorithms.</li>
+      <li>Anyone can check the chain to verify transactions.</li>
+    </ol>
 
-    drop down arrows with more data
+    <figure class="ngv-diagram">
+      <img src="{% static 'images/nextgenvoting/architecture.png' %}"
+           alt="Architecture diagram for NextGen Voting">
+      <!-- Diagram showing: user → Django app → encryption → blockchain -->
+      <figcaption>Basic architecture flow</figcaption>
+    </figure>
+  </section>
 
+  <!-- ===== TECH STACK ===== -->
+  <section class="ngv-stack container">
+    <h2 class="ngv-h2">Tech stack</h2>
+    <ul class="ngv-pill-list">
+      <li class="ngv-pill">Python / Django</li>
+      <li class="ngv-pill">Polygon (EVM)</li>
+      <li class="ngv-pill">Fernet Encryption</li>
+      <li class="ngv-pill">Celery (Async Jobs)</li>
+      <li class="ngv-pill">SQLite / PostgreSQL</li>
+    </ul>
+  </section>
 
+  <!-- ===== SCREENSHOTS ===== -->
+  <section class="ngv-gallery container">
+    <h2 class="ngv-h2">Screenshots</h2>
+    <div class="ngv-gallery__grid">
+      <figure class="ngv-shot">
+        <img src="{% static 'images/nextgenvoting/screen-vote.png' %}" alt="Vote form">
+        <!-- Screenshot of the ballot submission form -->
+        <figcaption>Ballot screen</figcaption>
+      </figure>
+
+      <figure class="ngv-shot">
+        <img src="{% static 'images/nextgenvoting/screen-results.png' %}" alt="Results view">
+        <!-- Screenshot of results -->
+        <figcaption>Results</figcaption>
+      </figure>
+
+      <figure class="ngv-shot">
+        <img src="{% static 'images/nextgenvoting/screen-chain.png' %}" alt="Blockchain view">
+        <!-- Screenshot showing on-chain record or transaction hash -->
+        <figcaption>Blockchain log</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== LIMITATIONS ===== -->
+  <section class="ngv-notes container">
+    <h2 class="ngv-h2">Current limitations</h2>
+    <ul class="ngv-bullets">
+      <li>Prototype-only – no authentication or voter ID yet.</li>
+      <li>Polygon gas fees can cause small delays.</li>
+      <li>Frontend is basic; it’s mostly backend logic right now.</li>
+    </ul>
+  </section>
+
+  <!-- ===== FUTURE PLANS ===== -->
+  <section class="ngv-future container">
+    <h2 class="ngv-h2">NextGen Voting 2.0</h2>
+    <p>
+      I’m planning a full rebuild that separates the backend and frontend completely.
+      The backend will become a REST API built with Django REST Framework,
+      and the frontend will be written in React.
+    </p>
+    <ul class="ngv-bullets">
+      <li>Full React interface with live updates and better UX.</li>
+      <li>Django REST API for ballot submission, results, and auditing.</li>
+      <li>JWT-based authentication for voter sessions.</li>
+      <li>More modular blockchain layer to test different networks.</li>
+    </ul>
+
+    <div class="ngv-hero__art">
+      <img class="ngv-hero__img"
+           src="{% static 'images/nextgenvoting/ngv2-preview.png' %}"
+           alt="Concept for NextGen Voting 2.0">
+      <!-- Concept image or mock-up for version 2 -->
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="ngv-footer-cta container">
+    <div class="ngv-card ngv-card--cta">
+      <div>
+        <h3 class="ngv-h3">Code on GitHub</h3>
+        <p>You can browse the full project and follow progress on 2.0 there.</p>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/YourUser/NextGenVoting" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+    </div>
+  </section>
+
+</section>
 {% endblock %}

@@ -1,4 +1,10 @@
+import glob
+import os
+
 from django.shortcuts import render
+
+from myPortfolio_2 import settings
+
 
 # Create your views here.
 
@@ -20,7 +26,5 @@ def projects(request):
 
 def nextGenVoting(request):
     return render(request, "projects/nextGenVoting.html")
-
-
 def restaurantManagementSyetem(request):
     return render(request, "projects/restaurantManagementSyetem.html")

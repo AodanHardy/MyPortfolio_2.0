@@ -749,4 +749,291 @@ a:hover, a:focus {
   }
 }
 
+/* =============================
+   NextGen Voting Page Styles
+   ============================= */
+.ngv-page {
+  color: #f5f5f5;
+  background: #0b0b0f;
+  padding-bottom: 4rem;
+}
+.ngv-page h1, .ngv-page h2, .ngv-page h3 {
+  color: #fff;
+  font-weight: 600;
+}
+.ngv-page {
+  /* ----- Hero ----- */
+}
+.ngv-page .ngv-hero {
+  background: linear-gradient(160deg, #1b1b25 0%, #111 100%);
+  padding: 5rem 0 4rem;
+  text-align: left;
+}
+.ngv-page .ngv-hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.ngv-page .ngv-hero__copy {
+  flex: 1 1 400px;
+}
+.ngv-page .ngv-hero__art {
+  flex: 1 1 400px;
+  text-align: right;
+}
+.ngv-page .ngv-hero__img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.ngv-page .ngv-hero .ngv-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.ngv-page .ngv-hero .ngv-subtitle {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+.ngv-page .ngv-hero .ngv-cta .btn {
+  margin-right: 1rem;
+}
+.ngv-page {
+  /* ----- Sections ----- */
+}
+.ngv-page .ngv-summary,
+.ngv-page .ngv-how,
+.ngv-page .ngv-stack,
+.ngv-page .ngv-gallery,
+.ngv-page .ngv-notes,
+.ngv-page .ngv-future,
+.ngv-page .ngv-footer-cta {
+  margin-top: 5rem;
+}
+.ngv-page .ngv-h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+.ngv-page .ngv-card {
+  background: #14141a;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.ngv-page .ngv-card--cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.ngv-page {
+  /* ----- Stack Pills ----- */
+}
+.ngv-page .ngv-pill-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.ngv-page .ngv-pill {
+  background: #1d1d25;
+  color: #ddd;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid #333;
+}
+.ngv-page {
+  /* ----- Steps & Bullets ----- */
+}
+.ngv-page .ngv-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.ngv-page .ngv-steps li {
+  counter-increment: step;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+  color: #ccc;
+}
+.ngv-page .ngv-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+.ngv-page .ngv-bullets {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.ngv-page .ngv-bullets li {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+.ngv-page {
+  /* ----- Gallery ----- */
+}
+.ngv-page .ngv-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.ngv-page .ngv-shot img {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+.ngv-page .ngv-shot figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.ngv-page {
+  /* ----- Diagram ----- */
+}
+.ngv-page .ngv-diagram {
+  text-align: center;
+  margin-top: 2rem;
+}
+.ngv-page .ngv-diagram img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.ngv-page .ngv-diagram figcaption {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+.ngv-page {
+  /* ----- Responsive tweaks ----- */
+}
+@media (max-width: 768px) {
+  .ngv-page .ngv-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ngv-page .ngv-hero__art {
+    text-align: center;
+  }
+  .ngv-page .ngv-card--cta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =============================
+   Restaurant Management System Styles
+   ============================= */
+.rms-page {
+  background: #0b0b0f;
+  color: #f5f5f5;
+  padding-bottom: 3rem;
+}
+.rms-page h1, .rms-page h2, .rms-page h3 {
+  color: #fff;
+  font-weight: 600;
+}
+.rms-page {
+  /* ----- Hero ----- */
+}
+.rms-page .rms-hero {
+  background: linear-gradient(160deg, #1b1b25 0%, #111 100%);
+  padding: 5rem 0 4rem;
+}
+.rms-page .rms-hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.rms-page .rms-hero__copy {
+  flex: 1 1 400px;
+}
+.rms-page .rms-hero__art {
+  flex: 1 1 400px;
+  text-align: right;
+}
+.rms-page .rms-hero__img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.rms-page .rms-hero .rms-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.rms-page .rms-hero .rms-subtitle {
+  font-size: 1.15rem;
+  color: #ccc;
+}
+.rms-page {
+  /* ----- Sections ----- */
+}
+.rms-page .rms-summary,
+.rms-page .rms-future,
+.rms-page .rms-footer-cta {
+  margin-top: 4rem;
+}
+.rms-page .rms-h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.4rem;
+}
+.rms-page .rms-card {
+  background: #14141a;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.rms-page .rms-card--cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.rms-page .rms-bullets {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.rms-page .rms-bullets li {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+.rms-page {
+  /* ----- Responsive tweaks ----- */
+}
+@media (max-width: 768px) {
+  .rms-page .rms-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .rms-page .rms-hero__art {
+    text-align: center;
+  }
+  .rms-page .rms-card--cta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
