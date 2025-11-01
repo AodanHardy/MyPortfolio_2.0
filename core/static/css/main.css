@@ -749,9 +749,7 @@ a:hover, a:focus {
   }
 }
 
-/* =============================
-   NextGen Voting Page Styles
-   ============================= */
+/* NextGen Voting */
 .ngv-page {
   color: #f5f5f5;
   background: #0b0b0f;
@@ -762,180 +760,191 @@ a:hover, a:focus {
   font-weight: 600;
 }
 .ngv-page {
-  /* ----- Hero ----- */
+  /* hero */
 }
 .ngv-page .ngv-hero {
   background: linear-gradient(160deg, #1b1b25 0%, #111 100%);
-  padding: 5rem 0 4rem;
-  text-align: left;
+  padding: 3.5rem 0 2rem;
 }
 .ngv-page .ngv-hero__inner {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
   align-items: center;
-  gap: 2rem;
 }
-.ngv-page .ngv-hero__copy {
-  flex: 1 1 400px;
-}
-.ngv-page .ngv-hero__art {
-  flex: 1 1 400px;
-  text-align: right;
-}
-.ngv-page .ngv-hero__img {
-  max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+.ngv-page .ngv-hero__brand img {
+  width: 140px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.35));
 }
 .ngv-page .ngv-hero .ngv-title {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
 }
 .ngv-page .ngv-hero .ngv-subtitle {
-  font-size: 1.25rem;
-  color: #ccc;
-  margin-bottom: 1.5rem;
+  color: #cfcfd6;
+  max-width: 800px;
 }
 .ngv-page .ngv-hero .ngv-cta .btn {
-  margin-right: 1rem;
+  margin-right: 0.75rem;
+  margin-top: 0.75rem;
+}
+.ngv-page .ngv-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.ngv-page .ngv-pill {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: #1f1f28;
+  border: 1px solid #2c2c36;
+  color: #ddd;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 .ngv-page {
-  /* ----- Sections ----- */
+  /* sections */
 }
-.ngv-page .ngv-summary,
-.ngv-page .ngv-how,
-.ngv-page .ngv-stack,
-.ngv-page .ngv-gallery,
-.ngv-page .ngv-notes,
-.ngv-page .ngv-future,
-.ngv-page .ngv-footer-cta {
-  margin-top: 5rem;
+.ngv-page .ngv-section {
+  margin-top: 3.5rem;
 }
 .ngv-page .ngv-h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2b2b35;
+  padding-bottom: 0.4rem;
+}
+.ngv-page .ngv-h3 {
+  font-size: 1.2rem;
+  margin: 0.25rem 0 1rem;
+  color: #e8e8ee;
+}
+.ngv-page {
+  /* light cards for transparent PNGs */
+}
+.ngv-page .light-card {
+  background: #f5f7fb;
+  border: 1px solid #e1e5ef;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #1b1b20;
+}
+.ngv-page .light-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ngv-page .light-card figcaption {
+  color: #444;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.ngv-page .ngv-diagrams {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.ngv-page {
+  /* walkthrough */
+}
+.ngv-page .flow-group {
+  margin-top: 2rem;
+}
+.ngv-page .ngv-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ngv-page .ngv-steps li {
+  margin-bottom: 1rem;
+}
+.ngv-page .ngv-steps .block {
+  margin-top: 0.5rem;
+}
+.ngv-page {
+  /* larger screenshots — 2 per row */
+}
+.ngv-page .shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .ngv-page .shot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.ngv-page .shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #0e0e14;
+  box-shadow: 0 0 0 1px #1f1f27, 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.ngv-page .shot figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bdbdcc;
+  margin-top: 0.45rem;
+}
+.ngv-page {
+  /* results grid a bit tighter */
+}
+.ngv-page .rounds .shot img {
+  border-radius: 8px;
+}
+.ngv-page {
+  /* bullets */
+}
+.ngv-page .ngv-bullets {
+  padding-left: 1.2rem;
+  color: #cdcede;
+}
+.ngv-page .ngv-bullets li {
+  margin: 0.35rem 0;
+}
+.ngv-page {
+  /* cards */
 }
 .ngv-page .ngv-card {
   background: #14141a;
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 .ngv-page .ngv-card--cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
-}
-.ngv-page {
-  /* ----- Stack Pills ----- */
-}
-.ngv-page .ngv-pill-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.ngv-page .ngv-pill {
-  background: #1d1d25;
-  color: #ddd;
-  border-radius: 50px;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
-  border: 1px solid #333;
 }
 .ngv-page {
-  /* ----- Steps & Bullets ----- */
+  /* responsive */
 }
-.ngv-page .ngv-steps {
-  counter-reset: step;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-.ngv-page .ngv-steps li {
-  counter-increment: step;
-  margin-bottom: 1rem;
-  padding-left: 2.5rem;
-  position: relative;
-  color: #ccc;
-}
-.ngv-page .ngv-steps li::before {
-  content: counter(step);
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #007bff;
-  color: #fff;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  font-weight: bold;
-}
-.ngv-page .ngv-bullets {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-.ngv-page .ngv-bullets li {
-  color: #ccc;
-  margin-bottom: 0.5rem;
-}
-.ngv-page {
-  /* ----- Gallery ----- */
-}
-.ngv-page .ngv-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-.ngv-page .ngv-shot img {
-  width: 100%;
-  border-radius: 0.75rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  margin-bottom: 0.5rem;
-}
-.ngv-page .ngv-shot figcaption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #bbb;
-}
-.ngv-page {
-  /* ----- Diagram ----- */
-}
-.ngv-page .ngv-diagram {
-  text-align: center;
-  margin-top: 2rem;
-}
-.ngv-page .ngv-diagram img {
-  max-width: 100%;
-  border-radius: 0.75rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.ngv-page .ngv-diagram figcaption {
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-top: 0.5rem;
-}
-.ngv-page {
-  /* ----- Responsive tweaks ----- */
-}
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .ngv-page .ngv-hero__inner {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 100px 1fr;
   }
-  .ngv-page .ngv-hero__art {
-    text-align: center;
+  .ngv-page .ngv-diagrams {
+    grid-template-columns: 1fr;
   }
-  .ngv-page .ngv-card--cta {
-    flex-direction: column;
-    text-align: center;
+}
+@media (max-width: 600px) {
+  .ngv-page .ngv-title {
+    font-size: 2rem;
+  }
+  .ngv-page .ngv-nav {
+    gap: 0.4rem;
+  }
+  .ngv-page .ngv-pill {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
   }
 }
 

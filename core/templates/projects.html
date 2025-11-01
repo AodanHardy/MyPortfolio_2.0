@@ -9,7 +9,7 @@
         Some of my projects.
       </h1>
       <p class="apx-intro">
-        These are just some of the progrmming projects i have completed but there was many more i never
+        These are just some of the programming projects i have completed but there was many more i never
           thought to save, or have been lost including an attendance system i created on my first placement, and many
           Pygames.
       </p>
@@ -29,9 +29,9 @@
               <li>Python</li><li>Django</li><li>Postgres</li><li>Blockchain</li>
             </ul>
             <p class="apx-card-text">
-              NextGenVoting was my final year project.Built in Django, it let you create elections, add ballots, assign voters,
-                and send out ballot links by email. Votes were stored either in the database or on a simple blockchain
-                I built. The person who created the election could log in to view the results.
+              NextGenVoting was my final year project. Built in Django, it lets you create elections, add ballots,
+                assign voters, and send out ballot links by email. Votes are stored either in the database or in the
+                blockchain. The person who created the election can log in to view the results.
             </p>
             <div class="apx-card-cta">
               <a class="apx-link" href="{% url 'nextgenvoting' %}">Read more</a>
@@ -127,11 +127,11 @@
 
            <!-- Mobile vision -->
         <article class="apx-card">
-          <a class="apx-card-media" href="https://github.com/AodanHardy/C-D_CW2">
+          <a class="apx-card-media" href="{% url 'mobileVision' %}" target="_blank">
             <img src="{% static '/images/projects/tcp.png' %}" alt="TCP server diagram">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/C-D_CW2">Image classification using machine
+            <h3 class="apx-card-title"><a href="{% url 'mobileVision' %}" target="_blank">Image classification using machine
             learning</a></h3>
             <ul class="apx-badges"><li>Machine Learning</li><li>Python</li><li>Tensorflow</li></ul>
             <p class="apx-card-text">I used the CIFAR-10 image dataset (animals, planes, etc.), turned it grayscale
@@ -139,7 +139,7 @@
                 CNNs. I improved accuracy with batch norm, dropout, and early stopping. My final model hit around
                 75% test accuracy.</p>
             <div class="apx-card-cta">
-              <a class="apx-link" href="{% url 'mobileVision' %}">View Notebook </a>
+              <a class="apx-link" href="{% url 'mobileVision' %}" target="_blank">View Notebook </a>
             </div>
           </div>
         </article>
@@ -152,7 +152,8 @@
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/SportsApp">Sports App</a></h3>
             <ul class="apx-badges"><li>Android</li><li>Java</li></ul>
-            <p class="apx-card-text">Fixtures, results, and simple leaderboards.</p>
+            <p class="apx-card-text">An android app i created ror Mobile App development, its uses a free sports api to
+            get data on football clubs and leagues and displays them to the user.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/SportsApp">GitHub </a>
             </div>
@@ -167,7 +168,7 @@
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/FlagGameApp">Flag Game App</a></h3>
             <ul class="apx-badges"><li>Android</li><li>Java</li></ul>
-            <p class="apx-card-text">Timed quiz with incremental difficulty.</p>
+            <p class="apx-card-text">A simple android app that has several mini-games about flags.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/FlagGameApp">GitHub </a>
             </div>
@@ -180,9 +181,12 @@
             <img src="{% static 'images/projects/creditscore.png' %}" alt="Credit system">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/CreditScore">CreditSystem</a></h3>
+            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/CreditScore">Credit Score</a></h3>
             <ul class="apx-badges"><li>Python</li></ul>
-            <p class="apx-card-text">white this description.</p>
+            <p class="apx-card-text">This was a recreation of my first ever programming assignment. It asks the
+                user 10 credit-related questions and calculates a score based on the answers. The score is then
+                assessed (e.g. Excellent, Good, Poor). It’s all command-line and just uses basic Python features like
+                classes, input, and loops.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/CreditScore">GitHub </a>
             </div>
@@ -191,16 +195,16 @@
 
           <!-- Wall following robot -->
         <article class="apx-card">
-          <a class="apx-card-media" href="https://github.com/AodanHardy/">
+          <a class="apx-card-media" href="{% static 'slides/wallfollow.pdf' %}" target="_blank">
           <img src="{% static 'images/projects/robot.png' %}" alt="robot">
           </a>
           <div class="apx-card-body">
-            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/">Wall Following Robot</a></h3>
+            <h3 class="apx-card-title"><a href="{% static 'slides/wallfollow.pdf' %}" target="_blank">Wall Following Robot</a></h3>
             <ul class="apx-badges"><li>Python</li></ul>
             <p class="apx-card-text">A robot that follows a wall around a maze. It uses PID controllers to maintain
             a steady distance from the wall.</p>
             <div class="apx-card-cta">
-              <a class="apx-link" href="https://github.com/AodanHardy/">GitHub </a>
+              <a class="apx-link" href="{% static 'slides/wallfollow.pdf' %}" target="_blank">Presentation </a>
             </div>
           </div>
         </article>
