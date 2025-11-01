@@ -28,3 +28,7 @@ def nextGenVoting(request):
     return render(request, "projects/nextGenVoting.html")
 def restaurantManagementSyetem(request):
     return render(request, "projects/restaurantManagementSyetem.html")
+
+
+def mobileVision(request):
+    return render(request, 'projects/mobileVison.html')

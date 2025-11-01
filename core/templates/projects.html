@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block body %}
 <section class="apx-projects" aria-labelledby="apx-projects-title">
   <div class="apx-container">
@@ -9,7 +9,9 @@
         Some of my projects.
       </h1>
       <p class="apx-intro">
-        Just some of the work i have done and explanations.
+        These are just some of the progrmming projects i have completed but there was many more i never
+          thought to save, or have been lost including an attendance system i created on my first placement, and many
+          Pygames.
       </p>
     </header>
 
@@ -19,7 +21,7 @@
       <div class="apx-grid apx-grid--wide">
         <article class="apx-card">
           <a class="apx-card-media" href="{% url 'nextgenvoting' %}">
-            <img src="https://picsum.photos/1200/675?random=12" alt="Preview of NextGenVoting">
+            <img src="{% static '/images/projects/ngv.png' %}" alt="Preview of NextGenVoting">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="{% url 'nextgenvoting' %}">NextGenVoting</a></h3>
@@ -27,7 +29,9 @@
               <li>Python</li><li>Django</li><li>Postgres</li><li>Blockchain</li>
             </ul>
             <p class="apx-card-text">
-              My final year project. An online voting system that uses blockchain.
+              NextGenVoting was my final year project.Built in Django, it let you create elections, add ballots, assign voters,
+                and send out ballot links by email. Votes were stored either in the database or on a simple blockchain
+                I built. The person who created the election could log in to view the results.
             </p>
             <div class="apx-card-cta">
               <a class="apx-link" href="{% url 'nextgenvoting' %}">Read more</a>
@@ -38,14 +42,17 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="{% url 'restaurantManagementSyetem' %}">
-            <img src="https://picsum.photos/1200/675?random=14" alt="Restaurant Management System">
+            <img src="{% static '/images/projects/rms.png' %}" alt="Restaurant Management System">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="{% url 'restaurantManagementSyetem' %}">Restaurant Management System</a></h3>
             <ul class="apx-badges"><li>Java</li><li>Spring Boot</li></ul>
             <p class="apx-card-text">
               A secondary idea for my final year project that i built anyway,
-                its the backend of a restaurant management system built in Java using SpringBoot.
+                 its a restaurant management system backend built with Java and Spring Boot.
+                It handles tables, orders, and menus. The idea is to build an app that connects to it,
+                where staff can place orders and they get routed automatically to either the kitchen or
+                the bar depending on the type.
             </p>
             <div class="apx-card-cta">
               <a class="apx-link" href="{% url 'restaurantManagementSyetem' %}">Read more</a>
@@ -56,7 +63,7 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/RustDataStructuresAndAlgorithms">
-            <img src="https://picsum.photos/1200/675?random=21" alt="Rust CLI terminal preview">
+            <img src="{% static '/images/projects/ds&a.png' %}" alt="Rust CLI terminal preview">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/RustDataStructuresAndAlgorithms">Rust Algorithms and Data Structures</a></h3>
@@ -72,12 +79,13 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/FlappyBird">
-            <img src="https://picsum.photos/1200/675?random=22" alt="Flappy Bird clone">
+            <img src="{% static '/images/projects/flappybird.png' %}" alt="Flappy Bird clone">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/FlappyBird">Flappy Bird</a></h3>
             <ul class="apx-badges"><li>C++</li></ul>
-            <p class="apx-card-text">A clone of the game FlappyBird done in C++. .</p>
+            <p class="apx-card-text">A clone of the game FlappyBird done in C++. I created this game from scratch
+                as part of OOP module in second year.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/FlappyBird">GitHub </a>
             </div>
@@ -86,12 +94,14 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/SpaceInvaders">
-            <img src="https://picsum.photos/1200/675?random=23" alt="Space Invaders remake">
+            <img src="{% static '/images/projects/spaceinvaders.png' %}" alt="Space Invaders remake">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/SpaceInvaders">Space Invaders</a></h3>
             <ul class="apx-badges"><li>Rust</li></ul>
-            <p class="apx-card-text">Rebuilt my final-year project into a modern Rust-based game loop.</p>
+            <p class="apx-card-text">A Space Invaders clone built in Rust using macroquad. You control a player
+                at the bottom shooting up at rows of aliens that move and drop down over time. I kept it simple
+                but got all the core mechanics working like movement, shooting, and enemy behaviour.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/SpaceInvaders">GitHub </a>
             </div>
@@ -100,14 +110,36 @@
 
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/C-D_CW2">
-            <img src="https://picsum.photos/1200/675?random=24" alt="TCP server diagram">
+            <img src="{% static '/images/projects/tcp.png' %}" alt="TCP server diagram">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/C-D_CW2">TCP Server</a></h3>
             <ul class="apx-badges"><li>Java</li><li>Multithreading</li></ul>
-            <p class="apx-card-text">Thread-per-connection architecture and graceful shutdown management.</p>
+            <p class="apx-card-text">This was a basic TCP client-server system I made in Java for uni. The server
+                listens for messages and processes them, and each client connects and sends a list of names. Everything
+                runs in separate threads, and I used handlers for connection, messaging, and processing to keep it
+                organised..</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/C-D_CW2">GitHub </a>
+            </div>
+          </div>
+        </article>
+
+           <!-- Mobile vision -->
+        <article class="apx-card">
+          <a class="apx-card-media" href="https://github.com/AodanHardy/C-D_CW2">
+            <img src="{% static '/images/projects/tcp.png' %}" alt="TCP server diagram">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/C-D_CW2">Image classification using machine
+            learning</a></h3>
+            <ul class="apx-badges"><li>Machine Learning</li><li>Python</li><li>Tensorflow</li></ul>
+            <p class="apx-card-text">I used the CIFAR-10 image dataset (animals, planes, etc.), turned it grayscale
+                using the Y channel, and tested different models—from a basic one I wrote myself to more complex
+                CNNs. I improved accuracy with batch norm, dropout, and early stopping. My final model hit around
+                75% test accuracy.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="{% url 'mobileVision' %}">View Notebook </a>
             </div>
           </div>
         </article>
@@ -115,7 +147,7 @@
           <!-- Sports App -->
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/SportsApp">
-            <img src="https://picsum.photos/1200/600?random=25" alt="Sports app screens">
+            <img src="{% static 'images/projects/sportsapp.png' %}" alt="Sports app screens">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/SportsApp">Sports App</a></h3>
@@ -130,7 +162,7 @@
         <!-- Flag Game App -->
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/FlagGameApp">
-            <img src="https://picsum.photos/1200/600?random=26" alt="Flag Game App">
+            <img src="{% static 'images/projects/flaggame.png' %}" alt="Flag Game App">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/FlagGameApp">Flag Game App</a></h3>
@@ -145,14 +177,30 @@
         <!-- CreditSystem -->
         <article class="apx-card">
           <a class="apx-card-media" href="https://github.com/AodanHardy/CreditScore">
-            <img src="https://picsum.photos/1200/600?random=27" alt="Credit system">
+            <img src="{% static 'images/projects/creditscore.png' %}" alt="Credit system">
           </a>
           <div class="apx-card-body">
             <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/CreditScore">CreditSystem</a></h3>
             <ul class="apx-badges"><li>Python</li></ul>
-            <p class="apx-card-text">Data model practice and CLI workflows.</p>
+            <p class="apx-card-text">white this description.</p>
             <div class="apx-card-cta">
               <a class="apx-link" href="https://github.com/AodanHardy/CreditScore">GitHub </a>
+            </div>
+          </div>
+        </article>
+
+          <!-- Wall following robot -->
+        <article class="apx-card">
+          <a class="apx-card-media" href="https://github.com/AodanHardy/">
+          <img src="{% static 'images/projects/robot.png' %}" alt="robot">
+          </a>
+          <div class="apx-card-body">
+            <h3 class="apx-card-title"><a href="https://github.com/AodanHardy/">Wall Following Robot</a></h3>
+            <ul class="apx-badges"><li>Python</li></ul>
+            <p class="apx-card-text">A robot that follows a wall around a maze. It uses PID controllers to maintain
+            a steady distance from the wall.</p>
+            <div class="apx-card-cta">
+              <a class="apx-link" href="https://github.com/AodanHardy/">GitHub </a>
             </div>
           </div>
         </article>
