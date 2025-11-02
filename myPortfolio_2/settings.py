@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     "raspberrypi.local",
     "81.132.14.96",
     "192.168.1.77",
+    "aodan-hardy.com",
 ]
 
 
