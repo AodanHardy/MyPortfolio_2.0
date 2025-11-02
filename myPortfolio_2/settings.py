@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "raspberrypi.local",
+    "81.132.14.96",
 ]
 
 
